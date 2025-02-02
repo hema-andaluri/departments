@@ -149,6 +149,48 @@
         .task-item button:hover {
             background-color: #218838;
         }
+
+        /* Add this CSS to center the content in the sections */
+/* Center the content within the main content area */
+/* Center the content within the main content area */
+.content {
+    flex: 1;
+    padding: 30px;
+    background: #ffffff;
+    height: 100vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    justify-content: flex-start; /* Align content to the top */
+}
+
+/* Ensure sections are centered within the content area */
+.section {
+    display: none;
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    background: #f1f3f5;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    width: 80%; /* Adjust width as needed */
+    max-width: 600px; /* Adjust max-width as needed */
+    margin: 0 auto; /* Center the section horizontally */
+}
+
+/* Center the lists inside these sections */
+#attendanceSection ul,
+#examSchedule ul,
+#timeTable ul,
+#workLoad ul {
+    list-style-position: inside;
+    padding-left: 0;
+    text-align: left;
+    display: inline-block;
+    margin: 0 auto;
+}
+        
     </style>
 </head>
 <body>
@@ -188,6 +230,49 @@
          </main>
      </div>
 
+     <!-- Attendance Section -->
+<div id="attendanceSection" class="section" >
+    <h3>Attendance</h3>
+    <p>Here you can view and manage your attendance records.</p>
+    <ul>
+        <li>Attendance for Math: 90%</li>
+        <li>Attendance for Science: 85%</li>
+        <li>Attendance for History: 95%</li>
+    </ul>
+</div>
+
+<!-- Exam Schedule Section -->
+<div id="examSchedule" class="section">
+    <h3>Exam Schedule</h3>
+    <p>Upcoming exams and their schedules:</p>
+    <ul>
+        <li>Math Exam: 10/01/2025</li>
+        <li>Science Exam: 11/01/2025</li>
+        <li>History Exam: 12/01/2025</li>
+    </ul>
+</div>
+
+<!-- Time Table Section -->
+<div id="timeTable" class="section">
+    <h3>Time Table</h3>
+    <p>Your weekly schedule:</p>
+    <ul>
+        <li>Monday: Math (9 AM - 11 AM), Science (1 PM - 3 PM)</li>
+        <li>Tuesday: History (10 AM - 12 PM), Math (2 PM - 4 PM)</li>
+        <li>Wednesday: Science (9 AM - 11 AM), History (1 PM - 3 PM)</li>
+    </ul>
+</div>
+
+<!-- Work Load Section -->
+<div id="workLoad" class="section">
+    <h3>Work Load</h3>
+    <p>Your current workload:</p>
+    <ul>
+        <li>Math: 4 hours/week</li>
+        <li>Science: 3 hours/week</li>
+        <li>History: 5 hours/week</li>
+    </ul>
+</div>
      <script>
         function setUserDetails(username) {
             const userDetails = {
